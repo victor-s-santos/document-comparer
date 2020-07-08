@@ -1,0 +1,11 @@
+<form id="arquivo1" enctype="multipart/form-data" method="post" action="#">
+    <input id="file1" name="myfile1" type="file" />
+    <input type="submit" value="submit" id="submit" />
+    {% csrf_token %}
+ </form>
+ <br>
+ <form id="arquivo2" enctype="multipart/form-data" method="post" action="#">
+    <input id="file2" name="myfile2" type="file" />
+    <input type="submit" value="submit" id="submit" />
+    {% csrf_token %}
+ </form>
