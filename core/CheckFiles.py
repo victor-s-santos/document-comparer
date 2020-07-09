@@ -1,5 +1,6 @@
 from docx import Document
 import difflib
+import pandas as pd
 
 class CheckFiles:
     def __init__(self, f1, f2):
@@ -24,7 +25,7 @@ class CheckFiles:
 
     def compara_arquivos(self):
         """Compara os dois arquivos, linha a linha, dada que a quantidade de linhas é a mesma para os dois"""
-        for linha in difflib.unified_diff(self.lista1, self.lista2,fromfile=self.f1, tofile=self.f2, n=1):
+        for linha in difflib.unified_diff(self.lista1, self.lista2, n=1):
             self.lista_diferenca.append(linha)
         lista_zipada = list(zip(self.lista1, self.lista2, self.lista_diferenca))
         if len(lista_zipada) == 0:
