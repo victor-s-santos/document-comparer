@@ -13,7 +13,7 @@ def index(request):
         #form1 = UploadFileForm1(request.POST, request.FILES)
         if form.is_valid():
             check = CheckFiles(form.cleaned_data["arquivo1"], form.cleaned_data["arquivo2"])
-            print('Formulário válido!')
+            print(check.verifica_tamanho())
     else:
         #c.verifica_tamanho()
         print('Formulário inválido!')

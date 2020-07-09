@@ -1,23 +1,12 @@
+from docx import Document
+import difflib
+
 class CheckFiles:
     def __init__(self, f1, f2):
-        self.f1 = f1
-        self.f2 = f2
-        
-        self.lista1 = []
-        self.lista2 = []
-        self.lista_diferenca = []
-        
-        file1 = open(f1, 'rb')
-        file2 = open(f2, 'rb')
-    
-        self.document1 = Document(file1)
-        self.document2 = Document(file2)
-        file1.close()
-        file2.close()
-        
-        self.document1 = self.document1.paragraphs
-        self.document2 = self.document2.paragraphs
-        pd.set_option('display.max_colwidth', None)
+        #refatoração marota
+        self.lista1, self.lista2, self.lista_diferenca = [], [], []
+        self.document1 = Document(f1).paragraphs
+        self.document2 = Document(f2).paragraphs
 
     def verifica_tamanho(self):
         """Checa se a quantidade de linhas é a mesma para os dois arquivos"""
@@ -40,7 +29,6 @@ class CheckFiles:
             return("Os arquivos são exatamente iguais!")
         df = pd.DataFrame(lista_zipada, columns=['Arquivo1', 'Arquivo2', 'Diferença'])
         df = df.loc[df['Arquivo1'] != df['Arquivo2']]
-        #df = df.style.apply(self.highlight_cols, axis=None)
         return(df)
     
     def verifica_linhas(self):
