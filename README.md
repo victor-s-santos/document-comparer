@@ -5,14 +5,13 @@
 
 * __O que foi feito:__
     >- Estruturação do projeto:
-    >   - <span style="background-color:green">__Construção dos formulários para receber os arquivos;__</span>
-    >   - <span style="background-color:green">__Importar a função e executá-la dentro de uma view do django;__</span>
-    >   - <span
-    style="background-color:orange">__Página de retorno da função.__
+    >   - <div class="text-white bg-green mb-2">__Construção dos formulários para receber os arquivos;__</div>
+    >   - <div class="text-white bg-green mb-2">__Importar a função e executá-la dentro de uma view do django;__</div>
+    >   - <div class="text-white bg-orange mb-2">__Página de retorno da função.__</div>
 
     >- Lógica no Django:
-    >   - <span style="background-color:green">__Executar a função usando cada arquivo enviado no input como argumento da funçao;__</span>
-    >   - <span style="background-color:orange">__Retornar a saída da função dentro de ma view do django;__ </span>
+    >   - <div class="text-white bg-green mb-2">__Executar a função usando cada arquivo enviado no input como argumento da funçao;__</div>
+    >   - <div class="text-white bg-orange mb-2">__Retornar a saída da função dentro de ma view do django;__ </div>
 
 
 * __Problemas encontrados:__
