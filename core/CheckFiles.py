@@ -4,12 +4,13 @@ import pandas as pd
 
 class CheckFiles:
     def __init__(self, f1, f2):
-        #refatoração marota
         self.lista1, self.lista2, self.lista_diferenca = [], [], []
         self.f1 = f1
         self.f2 = f2
         self.document1 = Document(f1).paragraphs
         self.document2 = Document(f2).paragraphs
+        pd.set_option('display.max_colwidth', None)
+
 
     def verifica_tamanho(self):
         """Checa se a quantidade de linhas é a mesma para os dois arquivos"""
