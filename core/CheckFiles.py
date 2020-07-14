@@ -1,5 +1,4 @@
 from docx import Document
-import difflib
 import pandas as pd
 
 class CheckFiles:
@@ -26,14 +25,18 @@ class CheckFiles:
 
     def compara_arquivos(self):
         """Compara os dois arquivos, linha a linha, dada que a quantidade de linhas é a mesma para os dois"""
-        for linha in difflib.unified_diff(self.lista1, self.lista2, n=1):
-            self.lista_diferenca.append(linha)
-        lista_zipada = list(zip(self.lista1, self.lista2, self.lista_diferenca))
-        if len(lista_zipada) == 0:
-            return("Os arquivos são exatamente iguais!")
-        df = pd.DataFrame(lista_zipada, columns=['Arquivo1', 'Arquivo2', 'Diferença'])
-        df = df.loc[df['Arquivo1'] != df['Arquivo2']]
-        return(df)
+        arq1 = []
+        arq2 = []
+        for i,j in zip(self.lista1, self.lista2):
+            if i != j:
+                arq1.append(i)
+                arq2.append(j)
+        if len(arq1) == 0 and len(arq2) == 0:
+            return('Os arquivos são iguais!')
+        else:
+            data = {'Arquivo1':arq1, 'Arquivo2': arq2}    
+            df = pd.DataFrame(data, columns=['Arquivo1', 'Arquivo2'])
+            return(df)
     
     def verifica_linhas(self):
         """Retorna as linhas que diferem entre si, e as linhas únicas de um dos documentos."""
@@ -50,4 +53,3 @@ class CheckFiles:
                 self.lista1.append('Linha vazia')
                 """Retornar a função compara_arquivos com o mesmo tamanho para ambas as listas"""
             return(self.compara_arquivos())
-
