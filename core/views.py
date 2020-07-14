@@ -15,6 +15,6 @@ def index(request):
             return HttpResponse(check.to_html())
             #return render(request, 'index.html')
             
-    else:
-        print('Formulário inválido!')
+    #else:
+        #print('Formulário inválido!')
     return render(request, 'index.html', {'form': form})

@@ -1,0 +1,15 @@
+<h1>Data for Frame</h1>
+<table border="1px">
+	<tr>
+		{% for data in check %}
+			<th>{{ data }}</th>
+		{% endfor %}
+		{% for _, record in check.iterrows %}
+			<tr>
+				{% for value in data %}
+					<td>{{ value }}</td>
+				{% endfor %}
+			</tr>
+		{% endfor %}
+	</tr>
+</table>
