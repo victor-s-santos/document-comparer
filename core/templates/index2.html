@@ -1,12 +1,32 @@
-<h1>Data for Frame</h1>
-<table border="1px">
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- My css-->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <title>JurisfAI Document Comparer!</title>
+</head>
+<h1>JurisfAI Document Comparer</h1>
+<table class="table" border="1px">
+	<thead class="thead-dark">
+		<tr>
+		  <th scope="col">Arquivo Original</th>
+		  <th scope="col">Arquivo Secundário</th>
+		</tr>
+	  </thead>
 	<tr>
 		{% for data in check %}
 			<th>{{ data }}</th>
 		{% endfor %}
 		{% for _, record in check.iterrows %}
 			<tr>
-				{% for value in data %}
+				{% for value in record %}
 					<td>{{ value }}</td>
 				{% endfor %}
 			</tr>

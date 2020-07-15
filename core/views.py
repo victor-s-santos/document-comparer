@@ -9,12 +9,11 @@ def index(request):
     if request.method == 'POST':
         if form.is_valid():
             check = CheckFiles(form.cleaned_data["arquivo1"], form.cleaned_data["arquivo2"]).verifica_tamanho()
-            #context = dict(check)
             if type(check) == str:
                 return HttpResponse('Os arquivos são iguais!')
-            return HttpResponse(check.to_html())
-            #return render(request, 'index.html')
+            #return HttpResponse(check.to_html())
+            return render(request, 'index2.html', {'check': check})
             
-    #else:
-        #print('Formulário inválido!')
+    else:
+        print('Formulário inválido!')
     return render(request, 'index.html', {'form': form})
