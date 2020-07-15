@@ -21,9 +21,11 @@
 		</tr>
 	  </thead>
 	<tr>
+		<!--
 		{% for data in check %}
 			<th>{{ data }}</th>
 		{% endfor %}
+		-->
 		{% for _, record in check.iterrows %}
 			<tr>
 				{% for value in record %}
