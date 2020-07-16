@@ -25,6 +25,7 @@
     >   - pip install -r requirements.txt
     > Iniciar o servidor:
     >   - python manage.py runserver
+    
 * __Problemas encontrados:__
     >- Lógica no Django:
     >   - Da maneira como estou fazendo, estou gravando os arquivos na memória do servidor, desta forma o arquivo não possue caminho, e este caminho é necessário na aplicação da função.

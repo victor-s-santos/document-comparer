@@ -10,7 +10,7 @@ def comparador(request):
         if form.is_valid():
             check = CheckFiles(form.cleaned_data["arquivo1"], form.cleaned_data["arquivo2"]).verifica_tamanho()
             if type(check) == str:
-                return HttpResponse('Os arquivos são iguais!')
+                return render(request, 'arquivos_iguais.html')
             #return HttpResponse(check.to_html())
             return render(request, 'tabela.html', {'check': check})
     return render(request, 'formularios.html', {'form': form})
