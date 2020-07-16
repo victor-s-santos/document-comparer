@@ -12,9 +12,19 @@
 
     >- Lógica no Django:
     >   - <span style="background-color:green">__Executar a função usando cada arquivo enviado no input como argumento da funçao;__</span>
-    >   - <span style="background-color:orange">__Retornar a saída da função dentro de ma view do django;__ </span>
+    >   - <span style="background-color:green">__Retornar a saída da função dentro de ma view do django;__ </span>
 
-
+* __Como rodar:__
+    > Crie um virtualenv:
+    >   - python -m venv .venv
+    >   - source .venv/bin/activate
+    > Clone do repositório:
+    >   - git clone https://github.com/JurisfAI/fAI4-Django
+    >   - cd fAI4-Django
+    > Instalar as dependências:
+    >   - pip install -r requirements.txt
+    > Iniciar o servidor:
+    >   - python manage.py runserver
 * __Problemas encontrados:__
     >- Lógica no Django:
     >   - Da maneira como estou fazendo, estou gravando os arquivos na memória do servidor, desta forma o arquivo não possue caminho, e este caminho é necessário na aplicação da função.
