@@ -20,6 +20,7 @@
 	</tr>
 </table>
 <script>
+//a função que trás a diferença destacada	
 function highlight(newElem, oldElem){ 
   newElem.html(newElem.text().split('').map(function(val, i){
     return val != oldElem.text().charAt(i) ?
@@ -27,7 +28,7 @@ function highlight(newElem, oldElem){
       val;            
   }).join('')); 
 }
-
+//rodando a função sobre todas as linhas
 $("table tr").each(function(index){
     a = $(this).find("td");
     first_td = a.eq(0);
