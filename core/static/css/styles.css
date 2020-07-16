@@ -38,3 +38,7 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+/*Para aplicar a funçao*/
+.highlight {
+    background-color: #fae209;
+}

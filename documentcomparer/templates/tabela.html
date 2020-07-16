@@ -19,4 +19,20 @@
 		{% endfor %}
 	</tr>
 </table>
+<script>
+function highlight(newElem, oldElem){ 
+  newElem.html(newElem.text().split('').map(function(val, i){
+    return val != oldElem.text().charAt(i) ?
+      "<span class='highlight'>"+val+"</span>" : 
+      val;            
+  }).join('')); 
+}
+
+$("table tr").each(function(index){
+    a = $(this).find("td");
+    first_td = a.eq(0);
+    second_td = a.eq(1);    
+    highlight(second_td, first_td);
+  });
+</script>
 {% endblock %}
