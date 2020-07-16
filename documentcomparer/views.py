@@ -13,7 +13,4 @@ def comparador(request):
                 return HttpResponse('Os arquivos são iguais!')
             #return HttpResponse(check.to_html())
             return render(request, 'tabela.html', {'check': check})
-            
-    else:
-        print('Formulário inválido!')
     return render(request, 'formularios.html', {'form': form})
