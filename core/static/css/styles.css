@@ -38,30 +38,13 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-/*Para aplicar a funçao*/
-.highlight {
-    background-color: #fae209;
-}
 
 /* html diff*/
-html, body {
-    font: normal 14px/1.4 sans-serif;
-    background: #f1f1f1;
-  }
-  
-  ins {
+ins {
     background: lightgreen;
     text-decoration: none;
-  }
-  
-  del {
-    background: pink;
-  }
-  
-  ul {
-    display: flex;
-    list-style-type: none;
 }
-li {
-    background: #eee;
+  
+del {
+    background: pink;
 }
