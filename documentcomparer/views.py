@@ -6,7 +6,9 @@ from django.shortcuts import render
 from .forms import UploadFileForm
 from .CheckFiles import CheckFiles
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+"""BASE_DIR é necessário para criar o caminho dinâmico até o arquivo fixo de comparação"""
 arquivo_principal = os.path.join(BASE_DIR, "PrestacaoServico_Canon.docx")
+"""Utilizando a lib os, gerei uma variável que é a string referente ao caminho do arquivo"""
 def comparador(request):
     form = UploadFileForm(request.POST, request.FILES)
     if request.method == 'POST':
