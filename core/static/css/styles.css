@@ -2,6 +2,14 @@ body {
     text-align: center;
     margin-top: auto;
 }
+.navbar-default {
+    box-shadow: none;
+    border: none;
+}
+h3 {
+    font-weight: bold;
+}
+
 form {
     display: inline-block;
 }
@@ -14,10 +22,6 @@ img{
 }
 label{
     margin-right: auto;
-}
-p.intro {
-    border-top-style: inset;
-    border-bottom: 0.5px solid;
 }
 form{
     position: relative;
@@ -47,4 +51,9 @@ ins {
   
 del {
     background: pink;
+}
+
+nav {
+    border-bottom: #1f1a1a;
+    border: 0.5px;
 }
