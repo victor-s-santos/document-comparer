@@ -14,10 +14,14 @@ class DocumentComparerTest(TestCase):
 
     def test_htmltags(self):
         """Verify html tags"""
-        self.assertContains(self.response, '<form', 1)
-        #gambiarra aqui, por conta disso defino como 3 inputs
-        self.assertContains(self.response, '<input', 3)
-        self.assertContains(self.response, 'type="file"', 1)
-        self.assertContains(self.response, 'type="submit"', 1)
+        tags_html = (('<form', 1),
+                    ('<input', 3),
+                    ('type="file"', 1),
+                    ('type="submit"', 1)
+        )
+        for text, count in tags_html:
+            with self.subTest():
+                self.assertContains(self.response, text, count)
 
-"""Falta entender como criar os testes para a minha função Checkfiles"""
+"""Falta entender como criar os testes para a minha função Checkfiles,
+e entender como validar o arquivo que está sendo enviado pelo formulário"""

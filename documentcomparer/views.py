@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 import pandas as pd
 import os
 import sys
@@ -20,6 +19,5 @@ def comparador(request):
             #check.sort_values("Arquivo1", inplace=True)
             if type(check) == str:
                 return render(request, 'arquivos_iguais.html')
-            #return HttpResponse(check.to_html())
             return render(request, 'tabela.html', {'check': check})
     return render(request, 'formularios.html', {'form': form})
