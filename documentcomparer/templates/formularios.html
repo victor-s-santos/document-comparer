@@ -2,30 +2,29 @@
 {% load staticfiles %}
 {% block content %}
 <div class="container-fluid">
-  <p class="intro"><h6>Para utilizar o programa JurisfAI, você deve inserir apenas o arquivo na extensão .docx que deseja comparar.
-  Clique no botão superior e carregue o arquivo secundário. Este arquivo será levado como base para executar a comparação. O arquivo principal já está carregado no sistema, o qual deseja-se realizar a comparação. 
-    O programa levará alguns segundos para carregar os arquivos enviados e executar a comparação.</p> 
-    <p>Será então exibida uma tabela demonstrando os parágrafos de cada arquivo onde não ocorre a correspondência. O botão comparar pode ser usado para melhorar a experiência de uso do usuário, 
-    trazendo as não correspondências de forma mais simples e de modo a deixar visualmente mais fácil.</p> 
-  </h6></p>
+  <p class="intro"><h3>Comparador de Contratos de Prestação de Serviço Canon</h3></p> 
+    <p>Identifique as alterações de adição e exclusão de palavras entre o modelo de contratos de <br/>
+
+      prestação de serviço padrão Canon e suas respectivas versões preenchidas
+    </p> 
 </div>
 <div class="container mt-5">
-  <h4>JurisfAI</h4>
   <div class='formularios'>
       <form action="." method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <table>
           <tr>
-            <th>Arquivo Principal</th>
-            <th>Arquivo Secundário</th>
+            <th>Contrato de Serviço</th>
+            <th>Arquivo para Comparar</th>
           </tr>
           <tr>
           <td>PrestacaoServico_Canon.docx</td>
           <td>{{ form.arquivo2 }}</td>
           </tr>
         </table>
-        <br>
-      <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Comparar" />
+      </br>
+      </br>
+      <input class="btn btn-success my-2 my-sm-0" type="submit" value="Comparar Contratos" />
     </form>
   </div>
   </div>
