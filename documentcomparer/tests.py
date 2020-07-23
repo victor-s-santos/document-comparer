@@ -17,3 +17,7 @@ class DocumentComparerTest(TestCase):
         self.assertContains(self.response, '<form', 1)
         #gambiarra aqui, por conta disso defino como 3 inputs
         self.assertContains(self.response, '<input', 3)
+        self.assertContains(self.response, 'type="file"', 1)
+        self.assertContains(self.response, 'type="submit"', 1)
+
+"""Falta entender como criar os testes para a minha função Checkfiles"""
