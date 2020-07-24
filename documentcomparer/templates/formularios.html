@@ -2,22 +2,24 @@
 {% load staticfiles %}
 {% block content %}
 <div class="container-fluid">
+  <div class="intro">
   <p class="intro"><h3>Comparador de Contratos de Prestação de Serviço Canon</h3></p> 
     <p>Identifique as alterações de adição e exclusão de palavras entre o modelo de contratos de <br/>
 
       prestação de serviço padrão Canon e suas respectivas versões preenchidas
-    </p> 
+    </p>
+  </div>
 </div>
   <div class='formularios'>
       <form action="." method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <table>
           <tr>
-            <th>Contrato de Serviço</th>
-            <th>Arquivo para Comparar</th>
+            <th class="arquivocomparar">Contrato de Serviço</th>
+            <th class="arquivocomparar">Arquivo para Comparar WORD</th>
           </tr>
           <tr>
-          <td>PrestacaoServico_Canon.docx</td>
+          <td>ModeloCanon.docx</td>
           <td>{{ form.arquivo2 }}</td>
           </tr>
         </table>
