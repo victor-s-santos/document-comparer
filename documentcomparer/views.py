@@ -4,6 +4,8 @@ import sys
 from django.shortcuts import render
 from .forms import UploadFileForm
 from .utils.CheckFiles import CheckFiles
+#from .validador import FileExtensionValidator
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 """BASE_DIR é necessário para criar o caminho dinâmico até o arquivo fixo de comparação"""
