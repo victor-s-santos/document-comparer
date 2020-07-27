@@ -5,14 +5,13 @@
 
 * __O que foi feito:__
     >- Estruturação do projeto:
-    >   - <span style="background-color:green">__Construção dos formulários para receber os arquivos;__</span>
-    >   - <span style="background-color:green">__Importar a função e executá-la dentro de uma view do django;__</span>
-    >   - <span
-    style="background-color:orange">__Página de retorno da função.__
+    >   -__Construção dos formulários para receber os arquivos;__
+    >   -__Importar a função e executá-la dentro de uma view do django;__
+    >   -__Página de retorno da função.__
 
     >- Lógica no Django:
-    >   - <span style="background-color:green">__Executar a função usando cada arquivo enviado no input como argumento da funçao;__</span>
-    >   - <span style="background-color:green">__Retornar a saída da função dentro de ma view do django;__ </span>
+    >   -__Executar a função usando cada arquivo enviado no input como argumento da funçao;__
+    >   -__Retornar a saída da função dentro de ma view do django;__
 
 * __Como rodar:__
     > Crie um virtualenv:
@@ -27,3 +26,14 @@
     >   - python manage.py runserver
     > Rodar os testes:
     >   - python manage.py test
+
+    * __Testes:__
+    > Atualmente os testes se localizam em dois arquivos, um para cada app django:
+    > __Core:__
+    >   - Os testes da app core possuem a função de verificar o status code da requisição GET(precisa retornar 200);
+    >   - E a função de verificar se a aplicação carrega o template correto, no caso index.html;
+    >__DocumentComparer:__
+    >   - Os testes desta app também verificam o status code e o template, mas também os formulários;
+    >   - Verificando a estrutura do html, o csrf, e os campos do formulário, contidos em forms.py;
+    >   - Falta implementar os testes de validação do arquivo enviado por input (pois também não existe um validador);
+    >   - Falta implementar um teste para o módulo checkfiles, que é o módulo que faz a verificação dos arquivos. 
