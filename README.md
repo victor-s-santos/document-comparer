@@ -1,7 +1,7 @@
 # CheckFiles Django
 > Nesta aplicação, será jogado toda a lógica do notebook CheckFiles, em um servidor Django.
 
-> Como trata-se de um framework python, a idea de se obter uma melhor visualização do retorno da função, poderá ser obtido através de sua renderização em um template html.
+> Como trata-se de um framework python, a ideia de se obter uma melhor visualização do retorno da função, poderá ser obtido através de sua renderização em um template html, utilizando uma função javascript, htmldiff, que trás uma melhor visualização no sentido de identificar onde as diferenças ocorrem no texto.
 
 * __O que foi feito:__
     >- Estruturação do projeto:
@@ -25,9 +25,5 @@
     >   - pip install -r requirements.txt
     > Iniciar o servidor:
     >   - python manage.py runserver
-    
-* __Problemas encontrados:__
-    >- Lógica no Django:
-    >   - Da maneira como estou fazendo, estou gravando os arquivos na memória do servidor, desta forma o arquivo não possue caminho, e este caminho é necessário na aplicação da função.
-    >
-    >   - Procurando uma maneira de executar a função sem a necessidade de informar o caminho. 
+    > Rodar os testes:
+    >   - python manage.py test
