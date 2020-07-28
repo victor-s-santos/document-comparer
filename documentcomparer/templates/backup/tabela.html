@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<table class="table" border="1px">
+  <thead class="thead-dark">
+		<tr>
+		  <th scope="col">Arquivo Original</th>
+		  <th scope="col">Arquivo Secundário</th>
+		</tr>
+    </thead>
+  <tbody>
+      {% for _, record in check.iterrows %}
+        <tr>
+          {% for value in record %}
+            <td>{{ value }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+  </tbody>
+</table>
+<li>Vermelho: Texto removido</li>
+<li>Verde: Texto adicionado</li>
+<button onclick="myfunc()" id='btn'>Clique para destacar</button>
+<script src="{% static 'js/htmldiff.js' %}"></script>
+{% endblock %}
