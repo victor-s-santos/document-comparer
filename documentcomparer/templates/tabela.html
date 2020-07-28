@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-<table class="table" border="1px">
+<p><b>Legenda:</b></p>
+<p><ins>Verde: Texto adicionado</ins></p>
+<p><del>Vermelho: Texto removido</del></p>
+<button onclick="myfunc()" id='btn' class="btn btn-success mt-1">Clique para destacar</button>
+<table class="table mt-3" border="1px">
   <thead class="thead-dark">
 		<tr>
 		  <th scope="col">Arquivo Original</th>
@@ -18,8 +22,6 @@
       {% endfor %}
   </tbody>
 </table>
-<li>Vermelho: Texto removido</li>
-<li>Verde: Texto adicionado</li>
-<button onclick="myfunc()" id='btn'>Clique para destacar</button>
+<!--<button onclick="myfunc()" id='btn'>Clique para destacar</button>-->
 <script src="{% static 'js/htmldiff.js' %}"></script>
 {% endblock %}
