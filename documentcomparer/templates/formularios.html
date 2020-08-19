@@ -5,9 +5,9 @@
 </br>
 </br>
   <div class="intro">
-  <p class="intro"><h3>Comparador de Contratos de Prestação de Serviço Canon</h3></p>
-    <p>Identifique as alterações de adição e exclusão de palavras entre o modelo de contratos de <br/>
-      prestação de serviço padrão Canon e suas respectivas versões preenchidas
+  <p class="intro"><h3>Comparador de Documentos tipo .docx</h3></p>
+    <p>Identifique as alterações de adição e exclusão de palavras entre dois documentos. <br/>
+      Para melhor visualização, as alterações são identificadas pelas cores.
     </p>
   </div>
 </div>
@@ -16,8 +16,8 @@
         {% csrf_token %}
         <table>
           <tr>
-            <th class="arquivocomparar">Contrato de Serviço</th>
-            <th class="arquivocomparar2" text-align='center'>Arquivo para Comparar WORD</th>
+            <th class="arquivocomparar">Arquivo1.docx</th>
+            <th class="arquivocomparar2" text-align='center'>Arquivo2.docx</th>
           </tr>
           <tr>
           <td>{{ form.arquivo1 }}</td>
