@@ -26,3 +26,15 @@
     >   - pip install -r requirements.txt
     > Iniciar o servidor:
     >   - python manage.py runserver
+    
+* __Imagens da aplicação:__
+    * __Formulário para envio dos documentos:__
+    ![Visual1](temp/visual1.png)
+    
+    * __Comparando os documentos:__
+        - A comparação é feito parágrafo por parágrafo 
+    ![Visual2](temp/visual2.png)
+    
+    * __Melhor visualização:__
+        - Ao clicar no botão, a função javascript html differ é aplicada, trazendo esta estilização
+    ![Visual3](temp/visual3.png)
