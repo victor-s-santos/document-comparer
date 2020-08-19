@@ -3,7 +3,7 @@
 <html>
 <head>
   <!-- Favicon -->
-  <link rel="shortcut icon" href="{% static 'images/jurisfai.ico' %}">
+  <link rel="shortcut icon" href="{% static 'images/ico.ico' %}">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,16 +17,16 @@
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <title>JurisfAI</title>
+  <title>Comparador</title>
 </head>
 <body>
   <!-- Começa cabeçalho-->
   <nav class="navbar navbar-light bg-white">
-      <img src="{% static 'images/jurisfai2.png' %}" class="img-fluid" alt="Responsive image">
+      <img src="{% static 'images/ico.png' %}" class="img-fluid" alt="Responsive image">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="navbar-brand ml-3" href="{% url 'comparador' %}">JurisfAI</a>
-            <a class="navbar-brand" href="{% url 'comparador' %}">Demo Version</a>
+            <a class="navbar-brand ml-3" href="{% url 'index' %}">Home</a>
+            <a class="navbar-brand" href="{% url 'comparador' %}">Comparador</a>
         </li>
     </ul>
   </nav>
