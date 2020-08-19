@@ -1,7 +1,9 @@
-# CheckFiles Django
-> Nesta aplicação, será jogado toda a lógica do notebook CheckFiles, em um servidor Django.
+# Comparador de Documentos(.docx) com Django
+> Nesta aplicação, será jogado toda a lógica de uma aplicação python que lê e compara dois arquivos tipo .docx, sendo o servidor do django usado para que isto possa se tornar uma aplicação web.
 
 > Como trata-se de um framework python, a ideia de se obter uma melhor visualização do retorno da função, poderá ser obtido através de sua renderização em um template html, utilizando uma função javascript, htmldiff, que trás uma melhor visualização no sentido de identificar onde as diferenças ocorrem no texto.
+
+>Outro ponto a se destacar, é como utilizando o django, o projeto deixou de ser um script python e passou a ser uma aplicação web, tornando-se desta forma muito mais flexível.
 
 * __O que foi feito:__
     >- Estruturação do projeto:
@@ -24,16 +26,3 @@
     >   - pip install -r requirements.txt
     > Iniciar o servidor:
     >   - python manage.py runserver
-    > Rodar os testes:
-    >   - python manage.py test
-
-    * __Testes:__
-    > Atualmente os testes se localizam em dois arquivos, um para cada app django:
-    > __Core:__
-    >   - Os testes da app core possuem a função de verificar o status code da requisição GET(precisa retornar 200);
-    >   - E a função de verificar se a aplicação carrega o template correto, no caso index.html;
-    >__DocumentComparer:__
-    >   - Os testes desta app também verificam o status code e o template, mas também os formulários;
-    >   - Verificando a estrutura do html, o csrf, e os campos do formulário, contidos em forms.py;
-    >   - Falta implementar os testes de validação do arquivo enviado por input (pois também não existe um validador);
-    >   - Falta implementar um teste para o módulo checkfiles, que é o módulo que faz a verificação dos arquivos. 
