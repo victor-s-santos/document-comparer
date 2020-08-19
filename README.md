@@ -20,8 +20,8 @@
     >   - python -m venv .venv
     >   - source .venv/bin/activate
     > Clone do repositório:
-    >   - git clone https://github.com/JurisfAI/fAI4-Django
-    >   - cd fAI4-Django
+    >   - git clone https://github.com/victor-s-santos/document-comparer.git
+    >   - cd document-comparer
     > Instalar as dependências:
     >   - pip install -r requirements.txt
     > Iniciar o servidor:

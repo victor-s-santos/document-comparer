@@ -6,4 +6,3 @@
 *.ipynb_checkpoints/
 .env
 staticfiles/
-temp/
